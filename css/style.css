@@ -1,0 +1,23 @@
+html, body { margin: 0; height: 100%; overflow: hidden; background: #050405; font-family: system-ui, sans-serif; }
+#app canvas { display: block; }
+#vr {
+  position: fixed; left: 50%; bottom: 22px; transform: translateX(-50%);
+  padding: 14px 30px; font-size: 18px; font-weight: 700; color: #fff3ee; background: #c0392b;
+  border: 0; border-radius: 12px; cursor: pointer; box-shadow: 0 4px 18px rgba(0,0,0,0.5);
+}
+#vr:disabled { background: #3a2a2c; color: #a8968e; cursor: default; }
+#hint {
+  position: fixed; left: 16px; top: 14px; color: #efe6e0; font-size: 14px;
+  background: rgba(12,8,10,0.7); padding: 6px 10px; border-radius: 8px; pointer-events: none;
+}
+#hint:empty { display: none; }
+#fps {
+  display: none; position: fixed; right: 16px; top: 14px; color: #ffdf6e; font: bold 15px monospace;
+  background: rgba(0,0,0,0.6); padding: 4px 8px; border-radius: 6px; pointer-events: none;
+}
+/* Mira do modo PC: segue o mouse */
+#cross {
+  display: none; position: fixed; left: -18px; top: -18px; width: 36px; height: 36px; pointer-events: none;
+  border: 2px solid #ff4a3a; border-radius: 50%; box-shadow: 0 0 6px #000; box-sizing: border-box;
+}
+#cross::after { content: ""; position: absolute; left: 13px; top: 13px; width: 6px; height: 6px; background: #ff4a3a; border-radius: 50%; }
